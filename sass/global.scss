@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+@import "base/base";
+@import "base/config";
+@import "base/mixins";
+@import "base/ui-dialog";
+
+body{
+    font-family: "Microsoft Yahei";
+}
+
+.act-wrap{
+    background: url(../img/bg.jpg) no-repeat #38274d;
+    background-size: 100% auto;
+    padding: px2rem(550) 0 px2rem(40);
+    .o-hiyd-hd{
+        background:url(../img/title-bg.png) no-repeat center px2rem(10);
+        background-size: 100% auto;
+        width: px2rem(591);
+        margin: 0 auto;
+        h2{
+            text-indent: -500%;
+            background:url(../img/title.png) no-repeat center;
+            background-size: px2rem(201) auto;
+            height: px2rem(85);
+        }
+    }
+    .o-hiyd-bd{
+        background: #ffffff;
+        width: px2rem(591);
+        margin: 0 auto;
+        color: #5f308f;
+        font-size: px2rem(24);
+        line-height: px2rem(34);
+        padding: px2rem(26) px2rem(51) px2rem(38) px2rem(43);
+        position: relative;
+        &:before{
+            content: "";
+            width: px2rem(18);
+            height: px2rem(44);
+            position: absolute;
+            top: px2rem(220);
+            right: px2rem(-14);
+            background: #38274d;
+            -webkit-transform: rotate(31deg);
+                    transform: rotate(31deg);
+        }
+        p{
+            font-size: px2rem(22);
+        }
+        h3{
+            font-weight: bold;
+        }
+        .act-process{
+            h3.mg-top{
+                margin-top: px2rem(32);
+            }
+        }
+        .btn-install,.btn-login{
+            display: block;
+            text-indent: -500%;
+            height: px2rem(85);
+            margin-top: px2rem(32);
+        }
+        .btn-install{
+            background:url(../img/btn-install.png) no-repeat center;
+            background-size: auto 100%;
+        }
+        .btn-login{
+            background:url(../img/btn-login.png) no-repeat center;
+            background-size: auto 100%;
+        }
+        .install-explain{
+            font-size: px2rem(20);
+            color: #8c63b6;
+            text-align: center;
+            margin: px2rem(17) 0;
+        }
+        .act-explain{
+            // font-size: px2rem(22);
+            // h3{
+            //     font-size: px2rem(22);
+            // }
+            p{
+                margin-top: px2rem(6);
+            }
+        }
+        .text-right{
+            text-align: right;
+        }
+    }
+}
+.login-mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.login-wrap{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    background: #543e70;
+    border-radius: 2px;
+    padding: px2rem(20);
+    width: px2rem(495);
+    -webkit-transition: all .2s;
+            transition: all .2s;
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    form{
+        background: #ffffff;
+        padding: px2rem(36) 0 0 0;
+        p{
+            width: px2rem(387);
+            margin: 0 auto;
+            padding-bottom: px2rem(36);
+            position: relative;
+            .VCode{
+                width: px2rem(222);
+            }
+            a{
+                display: inline-block;
+                color: #ffffff;
+                background:#dfc42f;
+                height: px2rem(68);
+                width: px2rem(147);
+                text-align: center;
+                line-height: px2rem(68);
+                font-size: px2rem(24);
+                text-decoration: none;
+                position: absolute;
+                right: 0;
+                top: 0;
+                &.disable{
+                    background: #ccc;
+                }
+            }
+            .error{
+                color: #f03f3f;
+                font-size: px2rem(17);
+                position: absolute;
+                bottom: px2rem(10);
+                left: 0;
+            }
+        }
+        .spec-exp{
+            font-size: px2rem(20);
+            line-height: px2rem(24);
+            color: #5f308f;
+            padding-bottom: px2rem(10);
+        }
+    }
+    input[type="text"],input[type="tel"]{
+        background:#e3e3e3;
+        width: px2rem(387);
+        height: px2rem(68);
+        line-height: px2rem(68);
+        font-size: px2rem(24);
+        padding: 0 px2rem(32);
+        color: #333;
+    }
+    input[type="button"],.btn-ok{
+        background:#8643ca;
+        width: 100%;
+        height: px2rem(72);
+        line-height: px2rem(72);
+        color: #ffffff;
+        font-size: px2rem(24);
+        -webkit-appearance: none;
+    }
+    .finish-wrap{
+        background: #ffffff;
+        padding: px2rem(61) 0 px2rem(27);
+        h2{
+            font-weight: bold;
+            font-size: px2rem(35);
+            text-align: center;
+        }
+        p{
+            color: #666666;
+            font-size: px2rem(24);
+            line-height: px2rem(44);
+            padding: px2rem(54) px2rem(46) px2rem(39) px2rem(46);
+        } 
+        .btn-ok{
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            width: px2rem(387);
+            margin: 0 auto;
+        }
+    }
+    .close-form{
+        width: px2rem(50);
+        height: px2rem(50);
+        background: url(../img/cancle.png) no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        top: -px2rem(50);
+        right: -px2rem(40);
+    }
+}

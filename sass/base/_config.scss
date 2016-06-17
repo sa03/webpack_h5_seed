@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+$baseFontSize:          14px !default;
+$baseLineHeight:        1.5 !default;
+$baseFontFamily:        "Helvetica Neue", Helvetica, Tahoma, sans-serif !default;
+$fontCn:                "SimSun"; //宋体
+$fontYaHei:             "Microsoft Yahei"; //微软雅黑
+$fontHeiTi:             "SimHei"; //黑体
+
+$defHover: 				#c9151e;
+$redHover: 				#ee323c;
+$defFontColor:			#666666;
+
+$zindexDropdown:        1000 !default;
+$zindexFixedTopbar:     1010 !default;
+$zindexTooltip:         1020 !default;
+$zindexAlert:           1030 !default;
+$zindexModal:           1100 !default;
+
+$mainWidth: 1000px;

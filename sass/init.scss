@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+body{
+    // background-color: #19161d;
+}
+
+.ip-loader {
+    width: 100%;
+    height: 100%;
+    cursor: default;
+    pointer-events: none;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1d1b20;
+}
+.ip-loader .ip-inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -45px;
+    margin-top: -45px;
+}
+
+.ip-loader #ipLoaderText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    margin-left: -45px;
+    margin-top: -45px;
+    text-align: center;
+    font-size: 16px;
+    color: #df4442;
+}
+
+.ip-main{
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.ip-loader svg path {
+    fill: none;
+    stroke-width: 6;
+}
+
+.ip-loader svg path.ip-loader-circlebg {
+    stroke: #363e67;
+}
+
+.ip-loader svg path.ip-loader-circle {
+    -webkit-transition: stroke-dashoffset 0.2s;
+    transition: stroke-dashoffset 0.2s;
+    stroke: #df4442;
+}
+
+.loading .ip-main{
+    opacity: 0;
+}
+
+.loading .ip-loader {
+    opacity: 1;
+    -webkit-animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
+    animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
+}
+
+.loading .ip-loader {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+@-webkit-keyframes animInitialHeader {
+    from { opacity: 0; -webkit-transform: translate3d(0,800px,0); }
+}
+
+@keyframes animInitialHeader {
+    from { opacity: 0; -webkit-transform: translate3d(0,800px,0); transform: translate3d(0,800px,0); }
+}
+
+.loaded .ip-main{
+    transition-delay: 300ms;
+    opacity: 1;    
+}
+
+.loaded .ip-loader {
+    opacity: 1;
+}
+
+.loaded .ip-loader {
+    -webkit-animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+    animation: animLoadedLoader 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@-webkit-keyframes animLoadedLoader {
+    to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
+}
+
+@keyframes animLoadedLoader {
+    to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
+}

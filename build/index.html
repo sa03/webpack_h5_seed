@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+	<title>HI运动</title>
+	<meta name="keywords" content="">
+    <meta name="description" content="HI运动专注于私人定制最合适的健身减肥增肌塑形运动计划，提供最快速的健身资讯，最科学的运动饮食方案，通过健身用户社区互动和营养配餐及训练方案帮你实现减肥增肌塑形目标。">
+    <script>(function (d, c) { var e = d.documentElement, b = "orientationchange" in window ? "orientationchange" : "resize"; var a = function () { var f = e.clientWidth < 640 ? e.clientWidth : 640; if (!f) { return } e.style.fontSize = 20 * (f / 320) + "px" }; if (!d.addEventListener) { return } c.addEventListener(b, a, false); d.addEventListener("DOMContentLoaded", a, false); a() })(document, window);</script>
+<link href="global.css?351de3ec68f3fe389f3d" rel="stylesheet"></head>
+<body>
+    <div id="ipContainer">
+        <div class="ip-loader">
+            <svg class="ip-inner" width="90px" height="90px" viewBox="0 0 80 80">
+                <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                <path id="ipLoaderCircle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+            </svg>
+            <div id="ipLoaderText"></div>
+        </div>
+        <div class="ip-main m-wrap" id="App">
+            <h1>Hello!</h1>
+        </div>
+    </div>
+<script type="text/javascript" src="vendor.js?351de3ec68f3fe389f3d"></script><script type="text/javascript" src="index.bundle.js?351de3ec68f3fe389f3d"></script></body>
+
+<script>
+    (function() {
+        var progress = 0;
+        var sec = 0.01;
+        var delay = 0;
+        var circle = document.getElementById("ipLoaderCircle");
+        circle.style.strokeDasharray = circle.style.strokeDashoffset = circle.getTotalLength();
+        var st = setTimeout(function () {
+            progress = progress + sec;
+            delay += sec * 1000;
+            var percent = Math.ceil(progress / sec);
+            document.getElementById("ipLoaderText").innerHTML = percent + "%";
+            circle.style.strokeDashoffset = circle.getTotalLength() * (1 - progress);
+            if (percent >= 100 || window.loadReady) {
+                document.getElementById("ipLoaderText").innerHTML = "100%";
+                clearTimeout(st);
+                document.getElementById("ipContainer").className = "loaded";
+            } else {
+                st = setTimeout(arguments.callee, delay);
+            }
+        }, sec * 1000);
+    })()
+</script>
+</html>
+

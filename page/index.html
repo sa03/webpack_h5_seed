@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+	<title>Hi运动-全民健身赚Q币</title>
+	<meta name="keywords" content="">
+    <meta name="description" content="HI运动专注于私人定制最合适的健身减肥增肌塑形运动计划，提供最快速的健身资讯，最科学的运动饮食方案，通过健身用户社区互动和营养配餐及训练方案帮你实现减肥增肌塑形目标。">
+    <script>(function (d, c) { var e = d.documentElement, b = "orientationchange" in window ? "orientationchange" : "resize"; var a = function () { var f = e.clientWidth < 640 ? e.clientWidth : 640; if (!f) { return } e.style.fontSize = 20 * (f / 320) + "px" }; if (!d.addEventListener) { return } c.addEventListener(b, a, false); d.addEventListener("DOMContentLoaded", a, false); a() })(document, window);</script>
+</head>
+<body>
+    <!-- <img src="/act/fanhe/img/share.jpg" alt="" style="opacity:0;position:absolute;width:0;height:0;"> -->
+    <div id="ipContainer">
+        <div class="ip-loader">
+            <svg class="ip-inner" width="90px" height="90px" viewBox="0 0 80 80">
+                <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                <path id="ipLoaderCircle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+            </svg>
+            <div id="ipLoaderText"></div>
+        </div>
+        <div class="ip-main m-wrap" id="App">
+            <div class="act-wrap">
+                <div class="o-hiyd-hd">
+                    <h2>活动流程</h2>
+                </div>
+                <div class="o-hiyd-bd">
+                    <div class="act-process">
+                        <h3>1、新注册用户在活动期间 </h3>
+                        <p>完成相应勋章成就，并在活动页面提交“Hi运动”用户注册手机号（如用第三方注册，可以在我的账户信息里绑定手机号）及QQ号，将会获得相应Q币奖励</p>
+                        <h3 class="mg-top">2、奖励条件和对应奖品</h3>
+                        <p> 达成累计训练天数3天 勋章（1Q币）<br>
+                            达成累计训练天数7天 勋章（3Q币）<br>
+                            达成累计训练天数15天 勋章（10Q币）<br>
+                            达成发帖累计获得点赞数50 勋章（1Q币）<br>
+                            达成发帖累计获得点赞数100 勋章（2Q币）</p>
+                    </div>
+                    <a class="btn-install" href="http://www.hiyd.com/d?lolboxAction=toExternalWebView&channel=fanhe">点击安装</a>
+                    <div id="btn-login" class="btn-login">申请领奖</div>
+                    <p class="install-explain">安装完成后，请用手机号码注册账号，再申请领奖</p>
+                    <div class="act-explain">
+                        <h3>活动须知：</h3>
+                        <p>1、该活动仅适用于活动期间注册的新用户，老用户不参与活动</p>
+                        <p>2、发放奖励以活动结束当天用户在“Hi运动”软件中的获得勋章数为准</p>
+                        <p>3、请正确提交有效的手机号和QQ号，如因提交信息有误导致发送奖品失败，Hi运动不承担相应责任</p>
+                        <p>4、提交完成后，会在3个工作日内发送相应奖励</p>
+                        <p>5、活动时间：2016年6月17日至2016年7月2日</p>
+                        <br>
+                        <p>“Hi运动”官方服务微信:hiydjs</p>
+                        <p class="text-right">——本活动最终解释权归Hi运动所有</p>
+                    </div>
+                </div>
+            </div>
+            <div id="login-mask" class="login-mask" style="display: none;">
+            </div>
+            <div class="login-wrap" id="login-wrap" style="display: none;">
+                <div id="close-form" class="close-form"></div>
+                <form id="login-form" action="#">
+                    <p>
+                        <input id="phone" type="tel" placeholder="输入您的手机号码">
+                        <em id="phone-error" class="error"></em>
+                    </p>
+                    <p>
+                        <input id="vCode" class="VCode" type="text" placeholder="填写验证码">
+                        <a id="getVCode" href="javascript:;">获取验证码</a>
+                        <em id="vCode-error" class="error"></em>
+                    </p>
+                    <p>
+                        <input id="qq" type="text" placeholder="输入您的QQ号码">
+                        <em id="qq-error" class="error"></em>
+                    </p>
+                    <p class="spec-exp">
+                        特别说明：您获得勋章数以活动结束后Hi运动后台的结算作准
+                    </p>
+                    <p>
+                        <input id="login" type="button" value="申请领奖">
+                    </p>
+                </form>
+                <div id="finish-wrap" class="finish-wrap" style="display: none;">
+                    <h2>非常感谢你的支持</h2>
+                    <p>我们将在活动结束后3个工作日内短信通知您，并把奖励发送到您的QQ（<em id="qq-code"></em>），请留意查收</p>
+                    <a id="btn-ok" class="btn-ok" href="javascript:;">好的</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    (function() {
+        var progress = 0;
+        var sec = 0.01;
+        var delay = 0;
+        var circle = document.getElementById("ipLoaderCircle");
+        circle.style.strokeDasharray = circle.style.strokeDashoffset = circle.getTotalLength();
+        circle.style.display = "block";
+        var st = setTimeout(function () {
+            progress = progress + sec;
+            delay += sec * 1000;
+            var percent = Math.ceil(progress / sec);
+            document.getElementById("ipLoaderText").innerHTML = percent + "%";
+            circle.style.strokeDashoffset = circle.getTotalLength() * (1 - progress);
+            if (percent >= 100 || window.loadReady) {
+                document.getElementById("ipLoaderText").innerHTML = "100%";
+                circle.style.strokeDashoffset = 0;
+                clearTimeout(st);
+                document.getElementById("ipContainer").className = "loaded";
+            } else {
+                st = setTimeout(arguments.callee, delay);
+            }
+        }, sec * 1000);
+    })()
+</script>
+</html>
+
